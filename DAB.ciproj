@@ -1,0 +1,10 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="Build">
+        <MSBuild Projects="DelphiAutomatedBuild.dproj"
+            Targets="Build"
+            Properties="Config=Debug"/>
+        <MSBuild Projects="DelphiAutomatedBuild.dproj"
+            Targets="Build"
+            Properties="Config=Release"/>
+    </Target>
+</Project>
