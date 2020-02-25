@@ -5,7 +5,8 @@ program DelphiAutomatedBuild;
 {$R *.res}
 
 uses
-  System.SysUtils;
+  System.SysUtils,
+  uVersionInfo;
 
 begin
   try
@@ -18,6 +19,7 @@ begin
     {$IFDEF TRIAL}
     WriteLn('This is TRIAL version');
     {$ENDIF DEBUG}
+    WriteLn('This file version is ', GetFileVersion);
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
