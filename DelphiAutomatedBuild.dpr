@@ -15,6 +15,9 @@ begin
     {$IFDEF DEBUG}
     WriteLn('This is DEBUG build');
     {$ENDIF DEBUG}
+    {$IFDEF TRIAL}
+    WriteLn('This is TRIAL version');
+    {$ENDIF DEBUG}
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
