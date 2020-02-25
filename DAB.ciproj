@@ -2,9 +2,9 @@
     <Target Name="Build">
         <MSBuild Projects="DelphiAutomatedBuild.dproj"
             Targets="Build"
-            Properties="Config=Debug"/>
+            Properties="Config=Debug;DCC_Exeoutput=$(DCC_ExeOutput)\Debug"/>
         <MSBuild Projects="DelphiAutomatedBuild.dproj"
             Targets="Build"
-            Properties="Config=Release"/>
+            Properties="Config=Release;DCC_Exeoutput=$(DCC_ExeOutput)\Release"/>
     </Target>
 </Project>
