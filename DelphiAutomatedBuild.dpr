@@ -18,7 +18,7 @@ begin
     {$ENDIF DEBUG}
     {$IFDEF TRIAL}
     WriteLn('This is TRIAL version');
-    {$ENDIF DEBUG}
+    {$ENDIF TRIAL}
     WriteLn('This file version is ', GetFileVersion);
   except
     on E: Exception do
